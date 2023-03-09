@@ -1,0 +1,17 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "85745a605096953195b087ae8179c951a0e7bc74af57736456c78e0a2a4c968c"
+build_start_time: [1677872381, 184059143]
+build_end_time: [1677872381, 274179935]
+inputs:
+  "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Heartbeat.swift": !private [1677872260, 634078025]
+  "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatController.swift": !private [1677872260, 634786128]
+  "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatStorage.swift": !private [1677872260, 635251283]
+  "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsBundle.swift": !private [1677872260, 635485649]
+  "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsPayload.swift": !private [1677872260, 636096954]
+  "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/RingBuffer.swift": !private [1677872260, 634322166]
+  "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Storage.swift": !private [1677872260, 633753299]
+  "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/StorageFactory.swift": !private [1677872260, 636440038]
+  "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/WeakContainer.swift": !private [1677872260, 635720252]
+  ? "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatController.swift"
+  : !private [1677872260, 634553909]
+  "/Users/vedatal/best/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatsPayload.swift": !private [1677872260, 635024547]

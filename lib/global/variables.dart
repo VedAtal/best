@@ -8,9 +8,10 @@ class Variables {
   static User? user = FirebaseAuth.instance.currentUser;
 
   // colors
-  static const Color teal = Color.fromRGBO(26, 166, 159, 100);
+  static const Color teal = Color.fromARGB(255, 26, 166, 159);
   static const Color gold = Color.fromARGB(255, 238, 176, 5);
-  static const Color backgroundTeal = Color.fromARGB(156, 214, 243, 243);
+  static const Color translucentTeal = Color.fromARGB(155, 26, 166, 159);
+  static const Color translucentGold = Color.fromARGB(155, 238, 176, 5);
 
   // methods
   static void bsRedirect() async {

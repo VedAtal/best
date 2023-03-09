@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "6d9f275b26f90e790abc050f2823a0311b9f9f1ee2d6730c471da763381f9d52"
+build_start_time: [1677872348, 396672964]
+build_end_time: [1677872348, 488633155]
+inputs:
+  "/Users/vedatal/.pub-cache/hosted/pub.dev/url_launcher_macos-3.0.3/macos/Classes/UrlLauncherPlugin.swift": !private [1677177630, 455332279]

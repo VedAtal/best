@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "45dcce080bc221f644b4c0ef9e57ce0d5f96bac06a7c6721611923698d096a7f"
+build_start_time: [1677872349, 617979049]
+build_end_time: [1677872375, 162647962]
+inputs:
+  "/Users/vedatal/.pub-cache/hosted/pub.dev/path_provider_foundation-2.1.2/macos/Classes/PathProviderPlugin.swift": [1677137699, 522491216]
+  "/Users/vedatal/.pub-cache/hosted/pub.dev/path_provider_foundation-2.1.2/macos/Classes/messages.g.swift": [1677137699, 521497011]

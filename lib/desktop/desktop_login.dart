@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import '../extensions/popup_route.dart';
 import '../extensions/responsive_layout.dart';
+import 'desktop_password_recovery.dart';
 
 // class DesktopLogin extends StatefulWidget {
 //   const DesktopLogin({super.key});
@@ -139,194 +140,281 @@ class DesktopLoginState extends State<DesktopLogin> {
     final currentWidth = MediaQuery.of(context).size.width;
     final currentHeight = MediaQuery.of(context).size.height;
 
-    return Container(
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black,
-            blurRadius: currentWidth * 0.01,
-          )
-        ],
-        border: Border.all(
-          color: Colors.black,
-          width: 5,
-        ),
-      ),
-      margin: EdgeInsets.fromLTRB(
-        currentWidth * 0.3,
-        currentHeight * 0.3,
-        currentWidth * 0.3,
-        currentHeight * 0.3,
-      ),
-      child: Material(
-        child: Center(
-          child: FittedBox(
-            child: Column(
-              children: [
-                // BLASC title
-                Container(
-                  margin: EdgeInsets.fromLTRB(
-                    ((currentWidth * 0.4) * 0.7) * 0.1,
-                    ((currentHeight * 0.4) * 0.25) * 0.1,
-                    ((currentWidth * 0.4) * 0.7) * 0.1,
-                    ((currentHeight * 0.4) * 0.25) * 0.1,
-                  ),
+    return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        toolbarHeight: currentHeight * 0.075,
+        backgroundColor: Colors.white,
+        title: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // BeST title
+            Container(
+              margin: EdgeInsets.only(left: currentWidth * 0.02),
+              height: (currentHeight * 0.075) * 0.9,
+              child: Center(
+                child: InkWell(
+                  hoverColor: Colors.transparent,
+                  splashColor: Colors.transparent,
+                  onTap: () {
+                    while (Navigator.canPop(context)) {
+                      Navigator.pop(context);
+                    }
+                    // Navigator.push(
+                    //   context,
+                    //   TransitionlessRoute(
+                    //     builder: (context) => const ResponsiveLayout(
+                    //       DesktopWelcome(),
+                    //       MobileMessage(),
+                    //     ),
+                    //   ),
+                    // );
+                  },
                   child: Text(
                     'BeST',
                     style: TextStyle(
                       color: Variables.teal,
-                      fontSize: (currentHeight * 0.4) * 0.17,
+                      fontSize: (currentHeight * 0.075) * 0.5,
                     ),
                   ),
                 ),
-                // email input
-                Container(
-                  margin: EdgeInsets.fromLTRB(
-                    ((currentWidth * 0.4) * 0.7) * 0.1,
-                    ((currentHeight * 0.4) * 0.25) * 0.1,
-                    ((currentWidth * 0.4) * 0.7) * 0.1,
-                    ((currentHeight * 0.4) * 0.25) * 0.1,
-                  ),
-                  width: (currentWidth * 0.4) * 0.7,
-                  child: TextField(
-                    controller: emailController,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Email',
-                    ),
-                  ),
-                ),
-                // password input
-                Container(
-                  margin: EdgeInsets.fromLTRB(
-                    ((currentWidth * 0.4) * 0.7) * 0.1,
-                    ((currentHeight * 0.4) * 0.25) * 0.1,
-                    ((currentWidth * 0.4) * 0.7) * 0.1,
-                    ((currentHeight * 0.4) * 0.25) * 0.1,
-                  ),
-                  width: (currentWidth * 0.4) * 0.7,
-                  child: TextField(
-                    obscureText: hidePassword,
-                    obscuringCharacter: '*',
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      labelText: 'Password',
-                      suffixIcon: IconButton(
-                        hoverColor: Colors.transparent,
-                        splashColor: Colors.transparent,
-                        onPressed: () {
-                          setState(() {
-                            hidePassword = !hidePassword;
-                          });
-                        },
-                        icon: Icon(hidePassword
-                            ? Icons.visibility
-                            : Icons.visibility_off),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(right: currentWidth * 0.02),
+              height: (currentHeight * 0.075) * 0.9,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // app logo
+                  Container(
+                    margin: EdgeInsets.only(right: currentWidth * 0.01),
+                    child: InkWell(
+                      onTap: () {
+                        Variables.bsRedirect();
+                      },
+                      child: Image.asset(
+                        'images/appLogo.jpg',
+                        height: (currentHeight * 0.075) * 0.7,
                       ),
                     ),
                   ),
-                ),
-                // login button
-                Container(
-                  margin: EdgeInsets.fromLTRB(
-                    ((currentWidth * 0.4) * 0.7) * 0.1,
-                    ((currentHeight * 0.4) * 0.25) * 0.15,
-                    ((currentWidth * 0.4) * 0.7) * 0.1,
-                    ((currentHeight * 0.4) * 0.25) * 0.1,
-                  ),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Variables.teal,
-                      minimumSize: Size(
-                        (currentWidth * 0.05),
-                        (currentHeight * 0.075) * 0.6,
-                      ),
-                      maximumSize: Size(
-                        (currentWidth * 0.2),
-                        (currentHeight * 0.075) * 0.6,
-                      ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+      body: Container(
+        padding: EdgeInsets.fromLTRB(
+          0,
+          currentHeight * 0.28,
+          0,
+          currentHeight * 0.28,
+        ),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/talentGraphic.png'),
+            opacity: 0.74,
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: FittedBox(
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Colors.black87,
+              ),
+              child: Column(
+                children: [
+                  // BLASC title
+                  Container(
+                    margin: EdgeInsets.fromLTRB(
+                      ((currentWidth * 0.4) * 0.7) * 0.1,
+                      ((currentHeight * 0.4) * 0.25) * 0.1,
+                      ((currentWidth * 0.4) * 0.7) * 0.1,
+                      ((currentHeight * 0.4) * 0.25) * 0.1,
                     ),
-                    onPressed: () {
-                      _signIn();
-                      _verifyCredentials();
-                    },
                     child: Text(
-                      'Login',
+                      'BeST',
                       style: TextStyle(
-                        fontSize: (currentHeight * 0.075) * 0.3,
+                        color: Variables.teal,
+                        fontSize: (currentHeight * 0.4) * 0.17,
                       ),
                     ),
                   ),
-                ),
-                // forgot password and create account
-                Row(
-                  children: [
-                    // forgot password
-                    Container(
-                      margin: EdgeInsets.fromLTRB(
-                        (currentWidth * 0.4) * 0.6 * 0.1,
-                        (currentHeight * 0.4) * 0.25 * 0.15,
-                        (currentWidth * 0.4) * 0.6 * 0.15,
-                        (currentHeight * 0.4) * 0.25 * 0.15,
-                      ),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                          Navigator.push(
-                            context,
-                            PopUpRoute(
-                              builder: (context) => const ResponsiveLayout(
-                                MobileMessage(),
-                                MobileMessage(),
-                              ),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          'Forgot Password',
-                          style: TextStyle(
-                            color: Colors.blue,
-                            decoration: TextDecoration.underline,
-                            fontSize: (currentHeight * 0.4) * 0.04,
+                  // email input
+                  Container(
+                    margin: EdgeInsets.fromLTRB(
+                      ((currentWidth * 0.4) * 0.7) * 0.1,
+                      ((currentHeight * 0.4) * 0.25) * 0.1,
+                      ((currentWidth * 0.4) * 0.7) * 0.1,
+                      ((currentHeight * 0.4) * 0.25) * 0.1,
+                    ),
+                    width: (currentWidth * 0.4) * 0.7,
+                    child: TextField(
+                      controller: emailController,
+                      decoration: const InputDecoration(
+                        filled: true,
+                        fillColor: Colors.grey,
+                        border: OutlineInputBorder(),
+                        labelText: 'Email',
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
                           ),
+                        ),
+                        labelStyle: TextStyle(
+                          color: Colors.white,
                         ),
                       ),
                     ),
-                    // create account
-                    Container(
-                      margin: EdgeInsets.fromLTRB(
-                        (currentWidth * 0.4) * 0.6 * 0.15,
-                        (currentHeight * 0.4) * 0.25 * 0.15,
-                        (currentWidth * 0.4) * 0.6 * 0.1,
-                        (currentHeight * 0.4) * 0.25 * 0.15,
-                      ),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                          Navigator.push(
-                            context,
-                            PopUpRoute(
-                              builder: (context) => const ResponsiveLayout(
-                                DesktopCreateAccount(),
-                                MobileMessage(),
-                              ),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          'Create Account',
-                          style: TextStyle(
-                            color: Colors.blue,
-                            decoration: TextDecoration.underline,
-                            fontSize: (currentHeight * 0.4) * 0.04,
+                  ),
+                  // password input
+                  Container(
+                    margin: EdgeInsets.fromLTRB(
+                      ((currentWidth * 0.4) * 0.7) * 0.1,
+                      ((currentHeight * 0.4) * 0.25) * 0.1,
+                      ((currentWidth * 0.4) * 0.7) * 0.1,
+                      ((currentHeight * 0.4) * 0.25) * 0.1,
+                    ),
+                    width: (currentWidth * 0.4) * 0.7,
+                    child: TextField(
+                      obscureText: hidePassword,
+                      obscuringCharacter: '*',
+                      controller: passwordController,
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.grey,
+                        border: const OutlineInputBorder(),
+                        labelText: 'Password',
+                        focusedBorder: const OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
                           ),
+                        ),
+                        labelStyle: const TextStyle(
+                          color: Colors.white,
+                        ),
+                        suffixIcon: IconButton(
+                          hoverColor: Colors.transparent,
+                          splashColor: Colors.transparent,
+                          color: Colors.white,
+                          onPressed: () {
+                            setState(() {
+                              hidePassword = !hidePassword;
+                            });
+                          },
+                          icon: Icon(hidePassword
+                              ? Icons.visibility
+                              : Icons.visibility_off),
                         ),
                       ),
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  // login button
+                  Container(
+                    margin: EdgeInsets.fromLTRB(
+                      ((currentWidth * 0.4) * 0.7) * 0.1,
+                      ((currentHeight * 0.4) * 0.25) * 0.15,
+                      ((currentWidth * 0.4) * 0.7) * 0.1,
+                      ((currentHeight * 0.4) * 0.25) * 0.07,
+                    ),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Variables.teal,
+                        minimumSize: Size(
+                          (currentWidth * 0.05),
+                          (currentHeight * 0.075) * 0.6,
+                        ),
+                        maximumSize: Size(
+                          (currentWidth * 0.2),
+                          (currentHeight * 0.075) * 0.6,
+                        ),
+                      ),
+                      onPressed: () {
+                        _signIn();
+                        _verifyCredentials();
+                      },
+                      child: Text(
+                        'Login',
+                        style: TextStyle(
+                          fontSize: (currentHeight * 0.075) * 0.3,
+                        ),
+                      ),
+                    ),
+                  ),
+                  // forgot password and create account
+                  Row(
+                    children: [
+                      // forgot password
+                      Container(
+                        margin: EdgeInsets.fromLTRB(
+                          (currentWidth * 0.4) * 0.6 * 0.1,
+                          (currentHeight * 0.4) * 0.25 * 0.15,
+                          (currentWidth * 0.4) * 0.6 * 0.15,
+                          (currentHeight * 0.4) * 0.25 * 0.2,
+                        ),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pop(context);
+                            Navigator.push(
+                              context,
+                              TransitionlessRoute(
+                                builder: (context) => const ResponsiveLayout(
+                                  DesktopPasswordRecovery(),
+                                  MobileMessage(),
+                                ),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            'Forgot Password',
+                            style: TextStyle(
+                              color: Variables.teal,
+                              decoration: TextDecoration.underline,
+                              fontSize: (currentHeight * 0.4) * 0.04,
+                            ),
+                          ),
+                        ),
+                      ),
+                      // create account
+                      Container(
+                        margin: EdgeInsets.fromLTRB(
+                          (currentWidth * 0.4) * 0.6 * 0.15,
+                          (currentHeight * 0.4) * 0.25 * 0.15,
+                          (currentWidth * 0.4) * 0.6 * 0.1,
+                          (currentHeight * 0.4) * 0.25 * 0.2,
+                        ),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pop(context);
+                            Navigator.push(
+                              context,
+                              PopUpRoute(
+                                builder: (context) => const ResponsiveLayout(
+                                  DesktopCreateAccount(),
+                                  MobileMessage(),
+                                ),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            'Create Account',
+                            style: TextStyle(
+                              color: Variables.teal,
+                              decoration: TextDecoration.underline,
+                              fontSize: (currentHeight * 0.4) * 0.04,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),

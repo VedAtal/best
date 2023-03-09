@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "48550ad463f08cade18d4d1c419a85d24ee363b6c5b7e6518be56a748f437032"
+build_start_time: [1677872677, 188136100]
+build_end_time: [1677872695, 834092140]
+inputs:
+  "/Users/vedatal/best/macos/Flutter/GeneratedPluginRegistrant.swift": [1677872591, 584907770]
+  "/Users/vedatal/best/macos/Runner/AppDelegate.swift": [1664393702, 0]
+  "/Users/vedatal/best/macos/Runner/MainFlutterWindow.swift": [1664393702, 0]

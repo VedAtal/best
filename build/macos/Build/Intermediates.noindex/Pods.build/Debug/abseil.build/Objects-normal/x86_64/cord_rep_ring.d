@@ -1,0 +1,43 @@
+dependencies: \
+  /Users/vedatal/best/macos/Pods/abseil/absl/strings/internal/cord_rep_ring.cc \
+  /Users/vedatal/best/macos/Pods/Target\ Support\ Files/abseil/abseil-prefix.pch \
+  /Users/vedatal/best/macos/Pods/abseil/absl/strings/internal/cord_rep_ring.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/container/internal/layout.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/config.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/options.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/policy_checks.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/meta/type_traits.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/strings/str_cat.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/port.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/attributes.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/optimization.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/strings/numbers.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/macros.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/numeric/bits.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/numeric/internal/bits.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/numeric/int128.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/numeric/int128_have_intrinsic.inc \
+  /Users/vedatal/best/macos/Pods/abseil/absl/strings/string_view.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/internal/throw_delegate.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/types/span.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/types/internal/span.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/algorithm/algorithm.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/utility/utility.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/internal/inline_variable.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/internal/identity.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/internal/invoke.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/strings/internal/cord_internal.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/internal/endian.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/casts.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/internal/unaligned_access.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/container/internal/compressed_tuple.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/strings/internal/cord_rep_flat.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/internal/raw_logging.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/internal/atomic_hook.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/base/log_severity.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/container/inlined_vector.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/container/internal/inlined_vector.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/memory/memory.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/strings/internal/cord_rep_consume.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/functional/function_ref.h \
+  /Users/vedatal/best/macos/Pods/abseil/absl/functional/internal/function_ref.h
