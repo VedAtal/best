@@ -84,8 +84,7 @@ class DesktopWelcome extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
+                      Navigator.of(context).push(
                         TransitionlessRoute(
                           builder: (context) => const ResponsiveLayout(
                             DesktopLogin(),
@@ -158,8 +157,7 @@ class DesktopWelcome extends StatelessWidget {
                                 ),
                               ),
                               onPressed: () {
-                                Navigator.push(
-                                  context,
+                                Navigator.of(context).push(
                                   PopUpRoute(
                                     builder: (context) =>
                                         const ResponsiveLayout(
@@ -250,8 +248,7 @@ class DesktopWelcome extends StatelessWidget {
                                 ),
                               ),
                               onPressed: () {
-                                Navigator.push(
-                                  context,
+                                Navigator.of(context).push(
                                   PopUpRoute(
                                     builder: (context) =>
                                         const ResponsiveLayout(

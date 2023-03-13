@@ -1,3 +1,4 @@
+import 'package:best/desktop/desktop_tracker.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -37,9 +38,8 @@ class BeST extends StatelessWidget {
           Theme.of(context).textTheme,
         ),
       ),
-      home: const ResponsiveLayout(DesktopWelcome(), MobileMessage()),
-      // home: MobileMessage()
-      // home: const DesktopDashboard(),
+      // home: const ResponsiveLayout(DesktopWelcome(), MobileMessage()),
+      home: DesktopTracker(),
     );
   }
 }

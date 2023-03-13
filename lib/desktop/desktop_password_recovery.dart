@@ -1,7 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import '../extensions/responsive_layout.dart';
+import '../extensions/transitionless_route.dart';
 import '../global/Variables.dart';
+import '../global/mobile_message.dart';
+import 'desktop_welcome.dart';
 
 class DesktopPasswordRecovery extends StatefulWidget {
   const DesktopPasswordRecovery({Key? key}) : super(key: key);
@@ -24,11 +28,14 @@ class _DesktopPasswordRecoveryState extends State<DesktopPasswordRecovery> {
           ),
         );
       },
-    ).then((value) {
-      while (Navigator.canPop(context)) {
-        Navigator.pop(context);
-      }
-    });
+    ).then((value) => Navigator.of(context).push(
+          TransitionlessRoute(
+            builder: (context) => const ResponsiveLayout(
+              DesktopWelcome(),
+              MobileMessage(),
+            ),
+          ),
+        ));
     await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
   }
 
@@ -57,18 +64,14 @@ class _DesktopPasswordRecoveryState extends State<DesktopPasswordRecovery> {
                   hoverColor: Colors.transparent,
                   splashColor: Colors.transparent,
                   onTap: () {
-                    while (Navigator.canPop(context)) {
-                      Navigator.pop(context);
-                    }
-                    // Navigator.push(
-                    //   context,
-                    //   TransitionlessRoute(
-                    //     builder: (context) => const ResponsiveLayout(
-                    //       DesktopWelcome(),
-                    //       MobileMessage(),
-                    //     ),
-                    //   ),
-                    // );
+                    Navigator.of(context).push(
+                      TransitionlessRoute(
+                        builder: (context) => const ResponsiveLayout(
+                          DesktopWelcome(),
+                          MobileMessage(),
+                        ),
+                      ),
+                    );
                   },
                   child: Text(
                     'BeST',

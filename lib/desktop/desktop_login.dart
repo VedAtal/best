@@ -1,4 +1,5 @@
 import 'package:best/desktop/desktop_create_account.dart';
+import 'package:best/desktop/desktop_home.dart';
 import 'package:best/extensions/transitionless_route.dart';
 import 'package:best/global/mobile_message.dart';
 import 'package:best/global/variables.dart';
@@ -9,25 +10,7 @@ import 'package:flutter/material.dart';
 import '../extensions/popup_route.dart';
 import '../extensions/responsive_layout.dart';
 import 'desktop_password_recovery.dart';
-
-// class DesktopLogin extends StatefulWidget {
-//   const DesktopLogin({super.key});
-
-//   @override
-//   State<DesktopLogin> createState() => _DesktopLoginState();
-// }
-
-// class _DesktopLoginState extends State<DesktopLogin> {
-//   @override
-//   Widget build(BuildContext context) {
-//     final currentWidth = MediaQuery.of(context).size.width;
-//     final currentHeight = MediaQuery.of(context).size.height;
-
-//     return Container(
-
-//     );
-//   }
-// }
+import 'desktop_welcome.dart';
 
 class DesktopLogin extends StatefulWidget {
   const DesktopLogin({Key? key}) : super(key: key);
@@ -122,11 +105,10 @@ class DesktopLoginState extends State<DesktopLogin> {
           'Verified': true,
         });
         dispose();
-        Navigator.push(
-          context,
+        Navigator.of(context).pushReplacement(
           TransitionlessRoute(
             builder: (context) => const ResponsiveLayout(
-              MobileMessage(),
+              DesktopHome(),
               MobileMessage(),
             ),
           ),
@@ -158,18 +140,14 @@ class DesktopLoginState extends State<DesktopLogin> {
                   hoverColor: Colors.transparent,
                   splashColor: Colors.transparent,
                   onTap: () {
-                    while (Navigator.canPop(context)) {
-                      Navigator.pop(context);
-                    }
-                    // Navigator.push(
-                    //   context,
-                    //   TransitionlessRoute(
-                    //     builder: (context) => const ResponsiveLayout(
-                    //       DesktopWelcome(),
-                    //       MobileMessage(),
-                    //     ),
-                    //   ),
-                    // );
+                    Navigator.of(context).push(
+                      TransitionlessRoute(
+                        builder: (context) => const ResponsiveLayout(
+                          DesktopWelcome(),
+                          MobileMessage(),
+                        ),
+                      ),
+                    );
                   },
                   child: Text(
                     'BeST',
@@ -359,9 +337,7 @@ class DesktopLoginState extends State<DesktopLogin> {
                         ),
                         child: InkWell(
                           onTap: () {
-                            Navigator.pop(context);
-                            Navigator.push(
-                              context,
+                            Navigator.of(context).push(
                               TransitionlessRoute(
                                 builder: (context) => const ResponsiveLayout(
                                   DesktopPasswordRecovery(),
@@ -390,9 +366,7 @@ class DesktopLoginState extends State<DesktopLogin> {
                         ),
                         child: InkWell(
                           onTap: () {
-                            Navigator.pop(context);
-                            Navigator.push(
-                              context,
+                            Navigator.of(context).push(
                               PopUpRoute(
                                 builder: (context) => const ResponsiveLayout(
                                   DesktopCreateAccount(),

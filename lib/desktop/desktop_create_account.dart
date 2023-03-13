@@ -3,10 +3,11 @@ import 'package:best/extensions/transitionless_route.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:best/global/Variables.dart';
+import 'package:best/global/variables.dart';
 
 import '../extensions/responsive_layout.dart';
 import '../global/mobile_message.dart';
+import 'desktop_welcome.dart';
 
 class DesktopCreateAccount extends StatefulWidget {
   const DesktopCreateAccount({Key? key}) : super(key: key);
@@ -93,11 +94,14 @@ class DesktopCreateAccountState extends State<DesktopCreateAccount> {
           ),
         );
       },
-    ).then((value) {
-      while (Navigator.canPop(context)) {
-        Navigator.pop(context);
-      }
-    });
+    ).then((value) => Navigator.of(context).push(
+          TransitionlessRoute(
+            builder: (context) => const ResponsiveLayout(
+              DesktopWelcome(),
+              MobileMessage(),
+            ),
+          ),
+        ));
     firebaseAuth.authStateChanges().listen((User? user) async {
       Variables.user = user;
       if (user != null) {
@@ -105,6 +109,7 @@ class DesktopCreateAccountState extends State<DesktopCreateAccount> {
           'UID': Variables.user!.uid,
           'Email': Variables.user!.email,
           'Verified': false,
+          'Skills': Variables.skills,
         });
         await Variables.user!.sendEmailVerification();
         dispose();
@@ -135,18 +140,14 @@ class DesktopCreateAccountState extends State<DesktopCreateAccount> {
                   hoverColor: Colors.transparent,
                   splashColor: Colors.transparent,
                   onTap: () {
-                    while (Navigator.canPop(context)) {
-                      Navigator.pop(context);
-                    }
-                    // Navigator.push(
-                    //   context,
-                    //   TransitionlessRoute(
-                    //     builder: (context) => const ResponsiveLayout(
-                    //       DesktopWelcome(),
-                    //       MobileMessage(),
-                    //     ),
-                    //   ),
-                    // );
+                    Navigator.of(context).push(
+                      TransitionlessRoute(
+                        builder: (context) => const ResponsiveLayout(
+                          DesktopWelcome(),
+                          MobileMessage(),
+                        ),
+                      ),
+                    );
                   },
                   child: Text(
                     'BeST',
@@ -362,9 +363,7 @@ class DesktopCreateAccountState extends State<DesktopCreateAccount> {
                     ),
                     child: InkWell(
                       onTap: () {
-                        Navigator.pop(context);
-                        Navigator.push(
-                          context,
+                        Navigator.of(context).push(
                           TransitionlessRoute(
                             builder: (context) => const ResponsiveLayout(
                               DesktopLogin(),
