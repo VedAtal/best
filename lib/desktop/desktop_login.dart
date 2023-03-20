@@ -1,5 +1,3 @@
-import 'package:best/desktop/desktop_create_account.dart';
-import 'package:best/desktop/desktop_home.dart';
 import 'package:best/extensions/transitionless_route.dart';
 import 'package:best/global/mobile_message.dart';
 import 'package:best/global/variables.dart';
@@ -9,6 +7,8 @@ import 'package:flutter/material.dart';
 
 import '../extensions/popup_route.dart';
 import '../extensions/responsive_layout.dart';
+import 'desktop_create_account.dart';
+import 'desktop_home.dart';
 import 'desktop_password_recovery.dart';
 import 'desktop_welcome.dart';
 
@@ -105,6 +105,7 @@ class DesktopLoginState extends State<DesktopLogin> {
           'Verified': true,
         });
         dispose();
+
         Navigator.of(context).pushReplacement(
           TransitionlessRoute(
             builder: (context) => const ResponsiveLayout(

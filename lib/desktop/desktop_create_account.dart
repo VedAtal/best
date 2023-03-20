@@ -109,7 +109,14 @@ class DesktopCreateAccountState extends State<DesktopCreateAccount> {
           'UID': Variables.user!.uid,
           'Email': Variables.user!.email,
           'Verified': false,
-          'Skills': Variables.skills,
+          'Skills': Variables.skillsSP,
+          'Juntos': ['open'],
+        });
+        FirebaseFirestore.instance.collection('users').doc(user.uid).collection('logs').doc('filler').set({
+          'Time': 'Create your first log! The date of the log will show up here.',
+          'Description': 'A list of all your logs will be here so you can keep track of your growth and reflect. '
+          'This is where the description for each log will go.',
+          'Skills': 'Each log also keeps track of the skills developed! The skills for each log will show up here.'
         });
         await Variables.user!.sendEmailVerification();
         dispose();

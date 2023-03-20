@@ -2,10 +2,28 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "_fe_analyzer_shared",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/_fe_analyzer_shared-31.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "_flutterfire_internals",
       "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/_flutterfire_internals-1.0.16",
       "packageUri": "lib/",
       "languageVersion": "2.16"
+    },
+    {
+      "name": "analyzer",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/analyzer-2.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "args",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/args-2.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
     },
     {
       "name": "async",
@@ -22,6 +40,12 @@
     {
       "name": "characters",
       "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/characters-1.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "cli_util",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/cli_util-0.3.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -56,6 +80,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "convert",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/convert-3.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "crypto",
       "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/crypto-3.0.2",
       "packageUri": "lib/",
@@ -66,6 +96,12 @@
       "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "dcdg",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/dcdg-4.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "fake_async",
@@ -164,6 +200,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "glob",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/glob-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "google_fonts",
       "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/google_fonts-4.0.3",
       "packageUri": "lib/",
@@ -214,6 +256,12 @@
     {
       "name": "meta",
       "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/meta-1.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_config",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/package_config-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -278,6 +326,18 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "pub_semver",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/pub_semver-2.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "simple_gesture_detector",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/simple_gesture_detector-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/vedatal/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -306,6 +366,12 @@
       "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "table_calendar",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/table_calendar-3.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "term_glyph",
@@ -380,6 +446,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "watcher",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/watcher-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "win32",
       "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/win32-3.1.3",
       "packageUri": "lib/",
@@ -392,13 +464,19 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "yaml",
+      "rootUri": "file:///Users/vedatal/.pub-cache/hosted/pub.dev/yaml-3.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "best",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-03-03T19:34:43.018819Z",
+  "generated": "2023-03-19T20:55:04.541869Z",
   "generator": "pub",
   "generatorVersion": "2.19.3"
 }
