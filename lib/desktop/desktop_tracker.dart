@@ -189,6 +189,7 @@ class _DesktopTrackerState extends State<DesktopTracker> {
 Widget trackerLogs(double currentHeight, double currentWidth) {
   final Stream<QuerySnapshot> documentStream = FirebaseFirestore.instance
       .collection('users')
+      // .doc(Variables.user!.uid)
       .doc('WufjOBYoaDhe2RfjGoHf3v3uhzs1')
       .collection('logs')
       .orderBy('Time', descending: true)
@@ -282,6 +283,7 @@ Widget trackerLogs(double currentHeight, double currentWidth) {
 Widget skillInfo(double currentHeight, double currentWidth) {
   final Stream<DocumentSnapshot> documentStream = FirebaseFirestore.instance
       .collection('users')
+      // .doc(Variables.user!.uid)
       .doc('WufjOBYoaDhe2RfjGoHf3v3uhzs1')
       .snapshots();
 
@@ -397,6 +399,7 @@ Widget skillInfo(double currentHeight, double currentWidth) {
 Widget skillCard(double currentHeight, double currentWidth, String skill) {
   final Stream<DocumentSnapshot> documentStream = FirebaseFirestore.instance
       .collection('users')
+      // .doc(Variables.user!.uid)
       .doc('WufjOBYoaDhe2RfjGoHf3v3uhzs1')
       .snapshots();
 

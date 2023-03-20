@@ -361,7 +361,7 @@ class _DesktopNewLogState extends State<DesktopNewLog> {
 
     FirebaseFirestore.instance
         .collection('users')
-        .doc('WufjOBYoaDhe2RfjGoHf3v3uhzs1')
+        .doc(Variables.user!.uid)
         .collection('logs')
         .add({
       'Time': '${monthConvert(time.month)} ${time.day}, ${time.year}',
@@ -371,7 +371,7 @@ class _DesktopNewLogState extends State<DesktopNewLog> {
 
     FirebaseFirestore.instance
         .collection('users')
-        .doc('WufjOBYoaDhe2RfjGoHf3v3uhzs1')
+        .doc(Variables.user!.uid)
         .collection('logs')
         .doc('filler')
         .delete();

@@ -121,7 +121,8 @@ class _DesktopJuntosState extends State<DesktopJuntos> {
                                 (currentHeight * 0.075) * 0.55,
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                            },
                             child: Text(
                               'Add',
                               style: TextStyle(
@@ -157,8 +158,11 @@ class _CalendarWidgetState extends State<CalendarWidget> {
   CalendarFormat calendarFormat = CalendarFormat.month;
   Map<DateTime, List<String>> events = {};
 
-  final Stream<DocumentSnapshot> documentStream =
-      FirebaseFirestore.instance.collection('users').doc('WufjOBYoaDhe2RfjGoHf3v3uhzs1').snapshots();
+  final Stream<DocumentSnapshot> documentStream = FirebaseFirestore.instance
+      .collection('users')
+      // .doc(Variables.user!.uid)
+      .doc('WufjOBYoaDhe2RfjGoHf3v3uhzs1')
+      .snapshots();
 
   List<String> getEventsForDay(DateTime day) {
     return events[day] ?? [];
